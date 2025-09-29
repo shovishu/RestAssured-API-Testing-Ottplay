@@ -7,16 +7,16 @@
         <classes>
             <class name="auth.AuthTests"/>
             <class name="profile.ProfileTest"/>
-<!--            <class name="watchlist.GetWatchlistTest"/>-->
-<!--            <class name="watchlist.AddWatchlistTest"/>-->
-<!--            <class name="watchlist.DeleteWatchlistTest"/>-->
-<!--            <class name="like.GetLikesTest"/>-->
-<!--            <class name="like.AddLikeTest"/>-->
-<!--            <class name="like.DeleteLikeTest"/>-->
-<!--            <class name="whatsAppConsent.GetWhatsAppConsentStatusTests"/>-->
-<!--            <class name="whatsAppConsent.SubmitWhatsAppConsentTests"/>-->
-<!--            <class name="whatsAppConsent.UpdateWhatsAppConsent"/>-->
-<!--            <class name="player.VideoPlayerTests"/>-->
+            <class name="watchlist.GetWatchlistTest"/>
+            <class name="watchlist.AddWatchlistTest"/>
+            <class name="watchlist.DeleteWatchlistTest"/>
+            <class name="like.GetLikesTest"/>
+            <class name="like.AddLikeTest"/>
+            <class name="like.DeleteLikeTest"/>
+            <class name="whatsAppConsent.GetWhatsAppConsentStatusTests"/>
+            <class name="whatsAppConsent.SubmitWhatsAppConsentTests"/>
+            <class name="whatsAppConsent.UpdateWhatsAppConsent"/>
+            <class name="player.VideoPlayerTests"/>
         </classes>
     </test>
 </suite>
