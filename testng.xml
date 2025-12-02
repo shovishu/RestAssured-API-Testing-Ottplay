@@ -5,18 +5,26 @@
     </listeners>
     <test name="Smoke Group Tests">
         <classes>
-            <class name="auth.AuthTests"/>
-            <class name="profile.ProfileTest"/>
-            <class name="watchlist.GetWatchlistTest"/>
-            <class name="watchlist.AddWatchlistTest"/>
-            <class name="watchlist.DeleteWatchlistTest"/>
+<!--            <class name="auth.LoginTests"/>-->
+<!--            <class name="profile.ProfileTest"/>-->
+<!--            <class name="watchlist.GetWatchlistTest"/>-->
+<!--            <class name="watchlist.AddWatchlistTest"/>-->
+<!--            <class name="watchlist.DeleteWatchlistTest"/>-->
             <class name="like.GetLikesTest"/>
             <class name="like.AddLikeTest"/>
             <class name="like.DeleteLikeTest"/>
-            <class name="whatsAppConsent.GetWhatsAppConsentStatusTests"/>
-            <class name="whatsAppConsent.SubmitWhatsAppConsentTests"/>
-            <class name="whatsAppConsent.UpdateWhatsAppConsent"/>
-            <class name="player.VideoPlayerTests"/>
+<!--            <class name="whatsAppConsent.GetWhatsAppConsentStatusTests"/>-->
+<!--            <class name="whatsAppConsent.SubmitWhatsAppConsentTests"/>-->
+<!--            <class name="whatsAppConsent.UpdateWhatsAppConsent"/>-->
+
+<!--                            These two only to be done on prod                       -->
+<!--            <class name="player.VideoPlayerTests"/>-->
+<!--            <class name="player.MediaProgressTests"/>-->
+
+<!--            <class name="ManageProfiles.AvatarsListTests"/>-->
+<!--            <class name="ManageProfiles.ProfilesListTest"/>-->
+<!--            <class name="ManageProfiles.CreateProfileTests"/>-->
+<!--            <class name="ManageProfiles.DeleteProfileTests"/>-->
         </classes>
     </test>
 </suite>

@@ -20,37 +20,42 @@ public class ExtentTestListener implements ITestListener, IInvokedMethodListener
 
     @Override
     public void onTestStart(ITestResult result) {
-
-        String testName = result.getMethod().getMethodName();
+        String className = result.getTestClass().getName();
+        String methodName = result.getMethod().getMethodName();
+        String testName = className + "." + methodName; // ensures uniqueness
         String description = result.getMethod().getDescription();
-
         ExtentTest extentTest = extentTestMap.get(testName);
 
         if (extentTest == null) {
+            // create new test
             if (description != null && !description.isEmpty()) {
-                extentTest = extent.createTest(testName, description); // 👈 includes description
+                extentTest = extent.createTest(methodName, description);
             } else {
-                extentTest = extent.createTest(testName);
+                extentTest = extent.createTest(methodName);
             }
+
             extentTest.assignAuthor("Vishwajeet Singh");
             extentTest.assignDevice(System.getProperty("os.name"));
 
-            // 🔹 Auto-derive category from package
+            // ✅ Assign category based on package (feature folder)
             String packageName = result.getMethod().getRealClass().getPackage().getName();
-            String category = packageName.substring(packageName.lastIndexOf('.') + 1);
-            extentTest.assignCategory(category);
+            String[] packageParts = packageName.split("\\.");
+            String featureName = packageParts[packageParts.length - 1]; // e.g. auth, like, ManageProfiles
+            extentTest.assignCategory(featureName);
 
-            // Optional: still assign TestNG groups if you want sub-categories (smoke, regression)
+            // ✅ Assign TestNG groups (if any)
             for (String group : result.getMethod().getGroups()) {
                 extentTest.assignCategory(group);
             }
-            for (String group : result.getMethod().getGroups()) {
-                extentTest.assignCategory(group);
-            }
+
             extentTestMap.put(testName, extentTest);
         }
+
+        // Thread-safe storage for current test
         test.set(extentTest);
     }
+
+
 
     @Override
     public void onTestSuccess(ITestResult result) {

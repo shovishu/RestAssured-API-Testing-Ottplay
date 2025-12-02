@@ -1,6 +1,7 @@
 package utils;
 
 import clients.AuthClient;
+import clients.ManageProfileClient;
 import clients.ProfileClient;
 import io.restassured.response.Response;
 
@@ -8,6 +9,7 @@ public class SessionManager {
     private static String authToken;
     private static String clientId;
     private static String profileId;
+    private static String newProfileId;
 
     public static String getAuthToken() {
         if (authToken == null) {
@@ -38,6 +40,22 @@ public class SessionManager {
         }
         return profileId;
     }
+
+    public static String getNewProfileId() {
+        if (newProfileId == null) {
+            String token = getAuthToken();
+            String client = getClientId();
+
+            Response response = ProfileClient.getUserProfiles(token, client);
+            newProfileId = response.jsonPath().getString("data[2].user_profile_id");
+
+            if (newProfileId == null) {
+                throw new RuntimeException("❌ Could not fetch New Created user_profile_id.");
+            }
+        }
+        return newProfileId;
+    }
+
 
     private static void authenticate() {
         Response response = AuthClient.login();

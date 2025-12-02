@@ -23,102 +23,77 @@ public class MediaProgressTests {
         String clientId = SessionManager.getClientId();
         String profileId = SessionManager.getProfileId();
         System.out.println("Token: " + token);
-        System.out.println("Cline Id: " + clientId);
+        System.out.println("Client Id: " + clientId);
+        System.out.println("Profile Id: " + profileId);
 
         response = MediaProgressClient.getMediaProgress(token, clientId,profileId);
-
-//        // Print raw response
-//        String body = response.asString();
-//        System.out.println("Full Response:");
-//        System.out.println(body);
-//
-//        // Validate content-type before parsing
-//        if (response.getHeader("Content-Type").contains("application/json")) {
-//            json = response.jsonPath();
-//        } else {
-//            throw new RuntimeException("Response is not JSON! Body: " + body);
-//        }
+        response.prettyPrint();
+        json = response.jsonPath();
     }
-
 
 
     // 1️⃣ Validate status code and response time
-    @Test
-    public void testStatusCodeAndResponseTime() {
+    @Test(priority = 1)
+    public void testStatusCode() {
         Assert.assertEquals(response.getStatusCode(), 200, "Status code should be 200");
+    }
+
+    // 2️⃣ Playback array and URL validation
+    @Test(priority = 2)
+    public void testPlaybackUrl() {
+        String connectionId = json.get("connection_id");
+        String connectionState = json.get("connection_state");
+
+        Assert.assertNotNull(connectionId, "Connect Id should exists");
+        Assert.assertNotNull(connectionState, "Connect State should exists");
+    }
+
+    // 3️⃣ Values section validation
+    @Test(priority = 3)
+    public void testValuesSection() {
+
+        Assert.assertNotNull(json.get("progress"), "progress should not be null");
+        Assert.assertNotNull(json.get("duration"), "duration should not be null");
+    }
+
+    // 4️⃣ Subtitles validation
+    @Test(priority = 4)
+    public void testSubtitles() {
+        Assert.assertNotNull(json.get("_id"), "Media ID should not be null");
+        Assert.assertNotNull(json.get("ht_sso_id"), "Ht SSO should not be null");
+        Assert.assertNotNull(json.get("ottplay_id"), "Ottplay ID should not be null");
+        Assert.assertNotNull(json.get("profile_id"), "Profile ID should not be null");
+    }
+
+    @Test(priority = 5)
+    public void validateBooleanFlags() {
+        // List of boolean fields to validate
+        String[] booleanKeys = {
+                "disable_continue_watching",
+                "disable_recently_view",
+                "continue_watching",
+                "is_watching",
+                "max_devices_reached"
+        };
+
+        for (String key : booleanKeys) {
+            Object value = json.get(key);
+
+            // 1️⃣ Ensure key exists
+            Assert.assertNotNull(value, "❌ Key missing in response: " + key);
+
+            // 2️⃣ Ensure value is of boolean type
+            Assert.assertTrue(value instanceof Boolean,
+                    "❌ Expected boolean for key: " + key + " but found: " + value.getClass().getSimpleName());
+
+            // 3️⃣ Just print the value for logging/debug
+            System.out.println("✅ " + key + " = " + value);
+        }
+    }
+
+    @Test(priority = 6)
+    public void validateResponseTime(){
         Assert.assertTrue(response.getTime() <= 2000, "Response time exceeded 2000ms");
     }
 
-//    // 2️⃣ Playback array and URL validation
-//    @Test
-//    public void testPlaybackUrl() {
-//        List<String> playbackUrls = json.getList("playback.playback_url");
-//        Assert.assertNotNull(playbackUrls, "Playback array should exist");
-//        Assert.assertTrue(playbackUrls.size() > 0, "Playback array should not be empty");
-//
-//        for (String url : playbackUrls) {
-//            Assert.assertNotNull(url, "Playback URL should not be null");
-//            Assert.assertTrue(url.startsWith("https://"), "Playback URL should be valid: " + url);
-//        }
-//    }
-//
-//    // 3️⃣ Values section validation
-//    @Test
-//    public void testValuesSection() {
-//        Assert.assertNotNull(json.getString("values.pid"), "pid should not be null");
-//        Assert.assertNotNull(json.getString("values.protection_scheme"), "protection_scheme should not be null");
-//        Assert.assertNotNull(json.getString("values.kid"), "kid should not be null");
-//        Assert.assertNotNull(json.getString("values.token"), "token should not be null");
-//    }
-//
-//    // 4️⃣ Subtitles validation
-//    @Test
-//    public void testSubtitles() {
-//        List<String> subtitleUrls = json.getList("subtitles.content");
-//        Assert.assertNotNull(subtitleUrls, "Subtitles array should exist");
-//
-//        for (String url : subtitleUrls) {
-//            Assert.assertNotNull(url, "Subtitle URL should not be null");
-//            Assert.assertTrue(url.startsWith("https://"), "Subtitle URL should be valid: " + url);
-//        }
-//    }
-//
-//    // 5️⃣ enableWebsocket flag
-//    @Test
-//    public void testEnableWebsocket() {
-//        Assert.assertNotNull(json.getBoolean("enableWebsocket"), "enableWebsocket should exist");
-//    }
-//
-//    // 6️⃣ Optional: Validate response timestamps (createdAt, updatedAt)
-//    @Test
-//    public void testTimestamps() throws ParseException {
-//        validateISO8601(json.getString("values.createdAt"), "createdAt");
-//        validateISO8601(json.getString("values.updatedAt"), "updatedAt");
-//    }
-//
-//    // 7️⃣ Optional: Validate DRM info consistency
-//    @Test
-//    public void testDrmInfo() {
-//        Assert.assertNotNull(json.getString("values.protection_scheme"), "DRM protection_scheme must exist");
-//        Assert.assertNotNull(json.getString("values.kid"), "DRM kid must exist");
-//        Assert.assertNotNull(json.getString("values.token"), "DRM token must exist");
-//    }
-//
-//    // 8️⃣ Optional: Validate array sizes or additional flags if needed
-//    @Test
-//    public void testAdditionalFlags() {
-//        Assert.assertTrue(json.getList("playback").size() > 0, "Playback array must not be empty");
-//        Assert.assertNotNull(json.getBoolean("enableWebsocket"), "enableWebsocket must exist");
-//    }
-//
-//    // Helper method to validate ISO8601 timestamps
-//    private void validateISO8601(String timestamp, String fieldName) throws ParseException {
-//        if (timestamp == null) {
-//            System.out.println(fieldName + " is null, skipping format validation");
-//            return;
-//        }
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-//        sdf.setLenient(false);
-//        sdf.parse(timestamp);
-//    }
 }

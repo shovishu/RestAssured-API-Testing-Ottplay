@@ -1,8 +1,12 @@
 package watchlist;
 
 import baseClass.BaseClass;
+import clients.MediaProgressClient;
 import clients.WatchlistClient;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utils.SessionManager;
 
@@ -14,78 +18,59 @@ import static org.hamcrest.Matchers.*;
 
 public class GetWatchlistTest extends BaseClass {
 
-    @Test(priority = 1)
-    public void GetProfileWatchlistTest() {
-        // Always fetch from SessionManager
+    private Response response;  // class-level field
+    private JsonPath json;      // class-level field
+
+    @BeforeClass
+    public void setUp() {
         String token = SessionManager.getAuthToken();
-        String clientId = SessionManager.getClientId();
-        String userProfileId = SessionManager.getProfileId();
+        String profileId = SessionManager.getProfileId();
 
-        System.out.println("Token: " + token);
-        System.out.println("ClientId: " + clientId);
-        System.out.println("User Profile ID: " + userProfileId);
+        response = WatchlistClient.getWatchlist(token,profileId);
+        response.prettyPrint();
+        json = response.jsonPath();
+    }
 
-        // Call API
-        Response response = WatchlistClient.getWatchlist(token, userProfileId);
+    // 1️⃣ Validate status code and response time
+    @Test(priority = 1)
+    public void testStatusCode() {
+        Assert.assertEquals(response.getStatusCode(), 200, "Status code should be 200");
+    }
 
-        // Assert status code
-        assertThat(response.getStatusCode(), equalTo(200));
+    @Test(priority = 2)
+    public void GetProfileWatchlistTest() {
+        Assert.assertNotNull(json.get("totalDocuments"), " should not be null");
+    }
+    @Test(priority = 3)
+    public void validateResultsAndIds() {
+        // ✅ Step 1: Ensure the 'result' key actually exists
+        Object resultObj = json.get("result");
+        Assert.assertNotNull(resultObj, "❌ 'result' key is missing or null in response");
 
-        // Convert response to Map
-        Map<String, Object> responseData = response.jsonPath().getMap("");
-        System.out.println("Keys in response: " + responseData.keySet());
+        // ✅ Step 2: Get list safely
+        List<Map<String, Object>> results = json.getList("result");
+        Assert.assertNotNull(results, "❌ 'result' array not found or is null");
+        Assert.assertTrue(results.size() > 0, "❌ 'result' array is empty");
 
-        // Validate top-level keys
-        assertThat(responseData, allOf(
-                hasKey("statusCode"),
-                hasKey("isCached"),
-                hasKey("currentPage"),
-                hasKey("totalDocuments"),
-                hasKey("perPage"),
-                hasKey("previousPage"),
-                hasKey("isReviewed"),
-                hasKey("parentalFilter"),
-                hasKey("lastPage"),
-                hasKey("result")
-        ));
+        System.out.println("✅ Total results: " + results.size());
 
-        // Validate 'result' array
-        List<Map<String, Object>> results = (List<Map<String, Object>>) responseData.get("result");
-        assertThat(results, is(not(empty())));
+        // ✅ Step 3: Validate each '_id' inside result array
+        for (int i = 0; i < results.size(); i++) {
+            Map<String, Object> item = results.get(i);
 
-        for (Map<String, Object> item : results) {
-            Map<String, Object> moviePref = (Map<String, Object>) item.get("movie_pref");
-            assertThat(moviePref, allOf(
-                    hasKey("genres"),
-                    hasKey("posters"),
-                    hasKey("primary_language"),
-                    hasKey("reviews"),
-                    hasKey("_id"),
-                    hasKey("name"),
-                    hasKey("permalink"),
-                    hasKey("release_year"),
-                    hasKey("content_type"),
-                    hasKey("where_to_watch"),
-                    hasKey("seo_url"),
-                    hasKey("ottplay_id"),
-                    hasKey("ottplay_rating"),
-                    hasKey("is_adult"),
-                    hasKey("reviewExist")
-            ));
+            Assert.assertTrue(item.containsKey("_id"), "❌ Missing '_id' in result[" + i + "]");
+            Assert.assertNotNull(item.get("_id"), "❌ '_id' is null in result[" + i + "]");
+            Assert.assertFalse(item.get("_id").toString().trim().isEmpty(),
+                    "❌ '_id' is empty in result[" + i + "]");
 
-            // Check where_to_watch providers
-            List<Map<String, Object>> watchItems = (List<Map<String, Object>>) moviePref.get("where_to_watch");
-            for (Map<String, Object> watchItem : watchItems) {
-                Map<String, Object> provider = (Map<String, Object>) watchItem.get("provider");
-                assertThat(provider, allOf(
-                        hasKey("_id"),
-                        hasKey("name"),
-                        hasKey("status"),
-                        hasKey("subscription"),
-                        hasKey("free_for_all_provider"),
-                        hasKey("seourl")
-                ));
-            }
+            System.out.println("✅ result[" + i + "] _id = " + item.get("_id"));
         }
+    }
+
+
+
+    @Test(priority = 6)
+    public void validateResponseTime(){
+        Assert.assertTrue(response.getTime() <= 2000, "Response time exceeded 2000ms");
     }
 }

@@ -1,10 +1,9 @@
 package clients;
 
 import baseClass.BaseClass;
-import config.ConfigManager;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import models.requests.WhatsAppConsentRequest;
+import models.WhatsAppConsentRequest;
 
 import static io.restassured.RestAssured.given;
 

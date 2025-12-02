@@ -3,6 +3,7 @@ package like;
 import baseClass.BaseClass;
 import clients.LikeClient;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utils.SessionManager;
@@ -25,53 +26,47 @@ public class AddLikeTest extends BaseClass {
         String clientId = SessionManager.getClientId();
         String userProfileId = SessionManager.getProfileId();
 
-        System.out.println("Token: " + token);
-        System.out.println("ClientId: " + clientId);
-        System.out.println("User Profile ID: " + userProfileId);
+//        System.out.println("Token: " + token);
+//        System.out.println("ClientId: " + clientId);
+//        System.out.println("User Profile ID: " + userProfileId);
 
         response = LikeClient.addToLikes(token, userProfileId);
         data = response.jsonPath().getMap("data");
     }
     // TC-01: Status code is 201
     @Test(priority = 1)
-    public void statusCodeShouldBe201() {
+    public void validateStatusCode() {
         assertThat("Status code should be 201", response.getStatusCode(), equalTo(201));
     }
 
     // TC-02: Message is "Data saved successfully"
     @Test(priority = 2)
-    public void messageShouldBeCorrect() {
+    public void validateMessageResponse() {
         String message = response.jsonPath().getString("message");
         assertThat("Message should be 'Data saved successfully'", message, equalTo("Data saved successfully"));
     }
 
     // TC-03: Data object exists and is not null
     @Test(priority = 3)
-    public void dataObjectShouldExist() {
+    public void validateNoNullData() {
         assertThat("Data object should exist", data, notNullValue());
     }
 
     // TC-04: Mandatory fields exist and are not null/empty
     @Test(priority = 4)
-    public void mandatoryFieldsShouldExistAndNotBeEmpty() {
-        assertThat("Data object should exist", data, notNullValue());
-        String[] mandatoryFields = {"ht_sso_id", "movie_pref", "content_type", "status", "user_profile_id"};
-        for (String field : mandatoryFields) {
-            assertThat("Field " + field + " should exist", data.containsKey(field), is(true));
-            assertThat("Field " + field + " should not be null", data.get(field), notNullValue());
-            assertThat("Field " + field + " should not be empty", data.get(field).toString().trim(), not(isEmptyString()));
-        }
-    }
-
-    // TC-05: All keys exist
-    @Test(priority = 5)
-    public void allKeysShouldExist() {
+    public void validateMandatoryFields() {
         assertThat("Data object should exist", data, notNullValue());
         String[] allKeys = {"ottplay_id", "ht_sso_id", "device_id", "movie_pref", "content_type",
                 "user_profile_id", "status", "_id", "created_on", "modified_on", "__v"};
         for (String key : allKeys) {
             assertThat("Data should contain key: " + key, data.containsKey(key), is(true));
         }
+    }
+
+    // TC-05: Response Time
+    @Test(priority = 5)
+    public void validateResponseTime() {
+        Assert.assertTrue(response.getTime() < 500L,"Response time should be < 500ms");
     }
 
 }

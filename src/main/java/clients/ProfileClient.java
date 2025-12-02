@@ -21,7 +21,8 @@ public class ProfileClient extends BaseClass {
                         .addHeader("randomId", "1234")
                         .build())
                 .when()
-                .get("/api/user-service/v1/user/profile/list-profiles").then()
+                .get("/api/user-service/v1/user/profile/list-profiles")
+                .then()
                 .extract()
                 .response();
     }

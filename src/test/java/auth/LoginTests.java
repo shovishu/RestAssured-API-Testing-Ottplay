@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class AuthTests {
+public class LoginTests {
     public static Response response;
     @BeforeClass
     public static void setUp(){
@@ -71,7 +71,7 @@ public class AuthTests {
     @Test(priority = 7,description = "Verify Response Time")
     public void responseTimeTest() {
         long responseTime = response.getTime(); // ms
-        Assert.assertEquals(responseTime,250L,"Response time should be < 250ms");
+        Assert.assertTrue(responseTime< 250L,"Response time should be < 250ms");
     }
 
 }
