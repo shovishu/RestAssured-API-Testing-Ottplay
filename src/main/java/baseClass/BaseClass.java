@@ -2,13 +2,15 @@ package baseClass;
 
 import com.aventstack.extentreports.ExtentReports;
 import config.ConfigManager;
+import lombok.Getter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import utils.ExtentManager;
 
 public class BaseClass {
     private static ExtentReports extent;
-    private static final String env = System.getProperty("env", "preprod");
+    @Getter
+    private static final String env = System.getProperty("env", "prod");
 
     @BeforeSuite
     public void setupSuite() {

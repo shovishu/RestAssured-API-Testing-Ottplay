@@ -1,4 +1,4 @@
-package models.requests;
+package models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

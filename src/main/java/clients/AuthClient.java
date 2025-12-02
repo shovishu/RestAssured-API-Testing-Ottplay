@@ -1,9 +1,8 @@
 package clients;
 
 import baseClass.BaseClass;
-import config.ConfigManager;
 import io.restassured.response.Response;
-import models.requests.LoginRequest;
+import models.LoginRequest;
 import static io.restassured.RestAssured.given;
 
 public class AuthClient extends BaseClass {

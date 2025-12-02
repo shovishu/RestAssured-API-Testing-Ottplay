@@ -1,4 +1,5 @@
-package models.requests;
+package models;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,9 +14,9 @@ import lombok.NoArgsConstructor;
 @Builder                // enables builder pattern
 @NoArgsConstructor      // no-args constructor (needed by Jackson)
 @AllArgsConstructor     // all-args constructor
-public class LoginRequest {
-    private String cellNumber;
-    private String password;
-    private String referrer;
-    private boolean newsletterConsent;
+public class CreateProfileRequest {
+    private String avatar_id;
+    private String name;
+    private int profile_type;
+    private String profile_type_key;
 }

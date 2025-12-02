@@ -1,10 +1,9 @@
 package clients;
 
 import baseClass.BaseClass;
-import config.ConfigManager;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import models.requests.LikeRequest;
+import models.LikeRequest;
 
 import static io.restassured.RestAssured.given;
 
@@ -60,7 +59,5 @@ public class LikeClient extends BaseClass {
                 .when()
                 .delete("/api/user-service/v1/user/like/remove/" + contentId);
     }
-
-
 
 }

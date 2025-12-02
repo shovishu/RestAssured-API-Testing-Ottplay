@@ -1,5 +1,4 @@
-package models.requests;
-
+package models;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder                // enables builder pattern
 @NoArgsConstructor      // no-args constructor (needed by Jackson)
 @AllArgsConstructor     // all-args constructor
-public class LikeRequest {
+public class WatchlistRequest {
     private String movie_pref;
     private String content_type;
 }
