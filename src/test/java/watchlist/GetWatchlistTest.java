@@ -25,9 +25,14 @@ public class GetWatchlistTest extends BaseClass {
     public void setUp() {
         String token = SessionManager.getAuthToken();
         String profileId = SessionManager.getProfileId();
+        String clientId = SessionManager.getClientId();
+        String userProfileId = SessionManager.getProfileId();
 
-        response = WatchlistClient.getWatchlist(token,profileId);
-        response.prettyPrint();
+        System.out.println("Token: " + token);
+        System.out.println("ClientId: " + clientId);
+        System.out.println("User Profile ID: " + userProfileId);
+
+        response = WatchlistClient.getWatchlist(token, userProfileId, clientId);
         json = response.jsonPath();
     }
 
@@ -41,36 +46,29 @@ public class GetWatchlistTest extends BaseClass {
     public void GetProfileWatchlistTest() {
         Assert.assertNotNull(json.get("totalDocuments"), " should not be null");
     }
+
     @Test(priority = 3)
-    public void validateResultsAndIds() {
-        // ✅ Step 1: Ensure the 'result' key actually exists
-        Object resultObj = json.get("result");
-        Assert.assertNotNull(resultObj, "❌ 'result' key is missing or null in response");
+    public void validateAllMoviePrefAssetIds() {
 
-        // ✅ Step 2: Get list safely
         List<Map<String, Object>> results = json.getList("result");
-        Assert.assertNotNull(results, "❌ 'result' array not found or is null");
-        Assert.assertTrue(results.size() > 0, "❌ 'result' array is empty");
+        Assert.assertNotNull(results, "❌ 'result' array is null");
+        Assert.assertFalse(results.isEmpty(), "❌ 'result' array is empty");
 
-        System.out.println("✅ Total results: " + results.size());
-
-        // ✅ Step 3: Validate each '_id' inside result array
         for (int i = 0; i < results.size(); i++) {
-            Map<String, Object> item = results.get(i);
 
-            Assert.assertTrue(item.containsKey("_id"), "❌ Missing '_id' in result[" + i + "]");
-            Assert.assertNotNull(item.get("_id"), "❌ '_id' is null in result[" + i + "]");
-            Assert.assertFalse(item.get("_id").toString().trim().isEmpty(),
-                    "❌ '_id' is empty in result[" + i + "]");
+            String assetId = json.getString("result[" + i + "].movie_pref._id");
 
-            System.out.println("✅ result[" + i + "] _id = " + item.get("_id"));
+            Assert.assertNotNull(assetId, "❌ movie_pref._id is null in result[" + i + "]");
+            Assert.assertFalse(assetId.trim().isEmpty(),
+                    "❌ movie_pref._id is empty in result[" + i + "]");
+
+            System.out.println("🎯 result[" + i + "] movie_pref._id = " + assetId);
         }
     }
 
 
-
     @Test(priority = 6)
-    public void validateResponseTime(){
+    public void validateResponseTime() {
         Assert.assertTrue(response.getTime() <= 2000, "Response time exceeded 2000ms");
     }
 }

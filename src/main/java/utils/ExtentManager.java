@@ -4,7 +4,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import baseClass.BaseClass;
-import config.ConfigManager;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -17,11 +16,16 @@ public class ExtentManager {
     public static ExtentReports getInstance() {
         if (extent == null) {
 
-            // 📂 Create a timestamped folder for each report
+        // 🔹 Create the base directory ONLY once
+            String baseDir = System.getProperty("user.dir") + "/test-output/ExtentReports";
+            File folder = new File(baseDir);
+
+        // 🔹 Create a new timestamped report file every test execution
             String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-            String reportDir = System.getProperty("user.dir") + "/test-output/ExtentReports_" + timeStamp;
-            new File(reportDir).mkdirs();
-            String reportPath = reportDir + "/ExtentReport.html";
+            String reportPath = baseDir + "/ExtentReport_" + timeStamp + ".html";
+
+            System.out.println("📝 Report created at: " + reportPath);
+
 
             // 🧾 Configure ExtentSparkReporter
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);

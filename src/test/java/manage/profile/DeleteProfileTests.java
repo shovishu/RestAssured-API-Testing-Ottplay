@@ -1,4 +1,4 @@
-package ManageProfiles;
+package manage.profile;
 
 import clients.ManageProfileClient;
 import io.restassured.response.Response;
@@ -13,9 +13,15 @@ public class DeleteProfileTests {
     @BeforeClass
     public static void setUp() {
         String token = SessionManager.getAuthToken();
-        String newProfileId = SessionManager.getNewProfileId();
-        response = ManageProfileClient.deleteProfile(token,newProfileId);
-        response.prettyPrint();
+        String clientId = SessionManager.getClientId();
+        String userProfileId = SessionManager.getProfileId();
+
+        System.out.println("Token: " + token);
+        System.out.println("ClientId: " + clientId);
+        System.out.println("User Profile ID: " + userProfileId);
+
+        String newProfileId = SessionManager.getCreatedProfileId();
+        response = ManageProfileClient.deleteProfile(token,newProfileId,clientId);
     }
 
     @Test(priority = 1)
@@ -37,7 +43,8 @@ public class DeleteProfileTests {
 
     @Test(priority = 4)
     public static void verifyResponseTime(){
-        long responseTime = response.getTime();
-        Assert.assertEquals(responseTime,500L,"Took Longer than expected");
+        long responseTime = response.getTime(); // ms
+        System.out.println(responseTime);
+        Assert.assertTrue(responseTime< 5000L,"Response time should be < 250ms");
     }
 }

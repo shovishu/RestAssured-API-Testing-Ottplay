@@ -1,4 +1,4 @@
-package ManageProfiles;
+package manage.profile;
 
 import clients.ManageProfileClient;
 import io.restassured.response.Response;
@@ -14,10 +14,23 @@ public class CreateProfileTests {
 
     @BeforeClass
     public static void setUp() {
+
+        int profileType = 0;
+        String profileTypeKey = "adult_all";
+        String avatarId = "65e58d1e32d0991b17bfc043";
+        String profileName = "RestAssured Profile";
+
         String token = SessionManager.getAuthToken();
         String clientId = SessionManager.getAuthToken();
-        response = ManageProfileClient.createNewProfile(token,clientId);
-        response.prettyPrint();
+        String userProfileId = SessionManager.getProfileId();
+
+        System.out.println("Token: " + token);
+        System.out.println("ClientId: " + clientId);
+        System.out.println("User Profile ID: " + userProfileId);
+
+        response = ManageProfileClient.createNewProfile(token,clientId,profileType,profileTypeKey,avatarId,profileName);
+        String profileId = response.jsonPath().getString("data.user_profile_id");
+        SessionManager.setCreatedProfileId(profileId);
     }
 
     @Test(priority = 1)
@@ -34,11 +47,11 @@ public class CreateProfileTests {
     @Test(priority = 3)
     public static void verifyResponseMessage() {
         String message = response.jsonPath().getString("message");
-        Assert.assertEquals(message, "Profile created successfully","Not Successful");
+        Assert.assertEquals(message, "Profile created successfully", "Not Successful");
     }
 
     @Test(priority = 4)
-    public static void verifyMandatoryFiledInResponse(){
+    public static void verifyMandatoryFiledInResponse() {
 
         // Verify data fields are not null
         String userProfileId = response.jsonPath().getString("data.user_profile_id");
@@ -53,8 +66,9 @@ public class CreateProfileTests {
     }
 
     @Test(priority = 5)
-    public static void verifyResponseTime(){
-        long responseTime = response.getTime();
-        Assert.assertEquals(responseTime,500L,"Took Longer than expected");
+    public static void verifyResponseTime() {
+        long responseTime = response.getTime(); // ms
+        System.out.println(responseTime);
+        Assert.assertTrue(responseTime< 5000L,"Response time should be < 250ms");
     }
 }

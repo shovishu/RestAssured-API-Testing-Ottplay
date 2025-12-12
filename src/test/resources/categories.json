@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Assertion Errors",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*AssertionError.*"
+  },
+  {
+    "name": "Timeout Errors",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*TimeoutException.*"
+  },
+  {
+    "name": "Element Not Found",
+    "matchedStatuses": ["failed"],
+    "traceRegex": ".*NoSuchElementException.*"
+  },
+  {
+    "name": "Infrastructure",
+    "matchedStatuses": ["broken"]
+  }
+]

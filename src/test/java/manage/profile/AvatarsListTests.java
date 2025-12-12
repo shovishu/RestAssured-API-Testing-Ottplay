@@ -1,10 +1,11 @@
-package ManageProfiles;
+package manage.profile;
 
 import clients.ManageProfileClient;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import utils.SessionManager;
 
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,17 @@ public class AvatarsListTests {
 
     @BeforeClass
     public static void setUp() {
-        response = ManageProfileClient.getAvatarList();
+        String randomId = "1234";
+        // Always fetch from SessionManager
+        String token = SessionManager.getAuthToken();
+        String clientId = SessionManager.getClientId();
+        String userProfileId = SessionManager.getProfileId();
+
+        System.out.println("Token: " + token);
+        System.out.println("ClientId: " + clientId);
+        System.out.println("User Profile ID: " + userProfileId);
+
+        response = ManageProfileClient.getAvatarList(randomId);
     }
 
     @Test(priority = 1)

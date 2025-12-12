@@ -1,4 +1,4 @@
-package ManageProfiles;
+package manage.profile;
 
 import clients.ManageProfileClient;
 import io.restassured.response.Response;
@@ -16,9 +16,17 @@ public class ProfilesListTest {
 
     @BeforeClass
     public static void setUp() {
+        String randomId = "1234";
+
         String token = SessionManager.getAuthToken();
         String clientId = SessionManager.getClientId();
-        response = ManageProfileClient.getProfilesList(token,clientId);
+        String userProfileId = SessionManager.getProfileId();
+
+        System.out.println("Token: " + token);
+        System.out.println("ClientId: " + clientId);
+        System.out.println("User Profile ID: " + userProfileId);
+
+        response = ManageProfileClient.getProfilesList(token,clientId,randomId);
     }
 
     @Test(priority = 1)

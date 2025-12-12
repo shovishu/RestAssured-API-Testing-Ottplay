@@ -2,71 +2,109 @@ package like;
 
 import baseClass.BaseClass;
 import clients.LikeClient;
+import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utils.SessionManager;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+@Epic("Like Module")
+@Feature("Add to Likes API")
+@Severity(SeverityLevel.CRITICAL)
 public class AddLikeTest extends BaseClass {
+
     private static Response response;
     private Map<String, Object> data;
 
-    @BeforeTest()
+    @Attachment(value = "API Response", type = "application/json")
+    public String attachResponse(String res) {
+        return res;
+    }
+
+    @Attachment(value = "API Request", type = "text/plain")
+    public String attachRequest(String req) {
+        return req;
+    }
+
+    @BeforeClass
     public void setUp() {
-        // Always fetch from SessionManager
+        Allure.step("Fetching session details");
+
+        String contentId = "62f363d2d48670001c502201";
+        String contentType = "movie";
+        String deviceId = "078104a7928a0908";
+
         String token = SessionManager.getAuthToken();
         String clientId = SessionManager.getClientId();
         String userProfileId = SessionManager.getProfileId();
 
-//        System.out.println("Token: " + token);
-//        System.out.println("ClientId: " + clientId);
-//        System.out.println("User Profile ID: " + userProfileId);
+        Allure.step("Sending Add Like API request");
 
-        response = LikeClient.addToLikes(token, userProfileId);
+        response = LikeClient.addToLikes(
+                token,
+                userProfileId,
+                clientId,
+                contentId,
+                contentType,
+                deviceId
+        );
+
+        attachRequest(
+                "token=" + token +
+                        "\nclientId=" + clientId +
+                        "\nprofileId=" + userProfileId
+        );
+
+        attachResponse(response.asString());
         data = response.jsonPath().getMap("data");
     }
-    // TC-01: Status code is 201
+
     @Test(priority = 1)
+    @Description("Validate API response status code")
     public void validateStatusCode() {
-        assertThat("Status code should be 201", response.getStatusCode(), equalTo(201));
+        Allure.step("Validating status code 201");
+        assertThat(response.getStatusCode(), equalTo(201));
     }
 
-    // TC-02: Message is "Data saved successfully"
     @Test(priority = 2)
+    @Description("Validate message returned in response")
     public void validateMessageResponse() {
+        Allure.step("Extracting message");
         String message = response.jsonPath().getString("message");
-        assertThat("Message should be 'Data saved successfully'", message, equalTo("Data saved successfully"));
+        assertThat(message, equalTo("Data saved successfully"));
     }
 
-    // TC-03: Data object exists and is not null
     @Test(priority = 3)
+    @Description("Validate data object is not null")
     public void validateNoNullData() {
-        assertThat("Data object should exist", data, notNullValue());
+        Allure.step("Checking data object");
+        assertThat(data, notNullValue());
     }
 
-    // TC-04: Mandatory fields exist and are not null/empty
     @Test(priority = 4)
+    @Description("Validate mandatory fields inside 'data'")
     public void validateMandatoryFields() {
-        assertThat("Data object should exist", data, notNullValue());
-        String[] allKeys = {"ottplay_id", "ht_sso_id", "device_id", "movie_pref", "content_type",
-                "user_profile_id", "status", "_id", "created_on", "modified_on", "__v"};
+        Allure.step("Validating mandatory keys inside data");
+        String[] allKeys = {
+                "ottplay_id", "ht_sso_id", "device_id", "movie_pref", "content_type",
+                "user_profile_id", "status", "_id", "created_on", "modified_on", "__v"
+        };
+
         for (String key : allKeys) {
-            assertThat("Data should contain key: " + key, data.containsKey(key), is(true));
+            assertThat("Missing key: " + key, data.containsKey(key), is(true));
         }
     }
 
-    // TC-05: Response Time
     @Test(priority = 5)
+    @Description("Validate response time (<500ms)")
     public void validateResponseTime() {
-        Assert.assertTrue(response.getTime() < 500L,"Response time should be < 500ms");
+        Allure.step("Checking response time");
+        Assert.assertTrue(response.getTime() < 500L, "Response time should be < 500ms");
     }
-
 }

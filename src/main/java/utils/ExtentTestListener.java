@@ -20,41 +20,45 @@ public class ExtentTestListener implements ITestListener, IInvokedMethodListener
 
     @Override
     public void onTestStart(ITestResult result) {
-        String className = result.getTestClass().getName();
+
+        Class<?> clazz = result.getTestClass().getRealClass();
+        String className = clazz.getSimpleName();
         String methodName = result.getMethod().getMethodName();
-        String testName = className + "." + methodName; // ensures uniqueness
-        String description = result.getMethod().getDescription();
-        ExtentTest extentTest = extentTestMap.get(testName);
 
-        if (extentTest == null) {
-            // create new test
-            if (description != null && !description.isEmpty()) {
-                extentTest = extent.createTest(methodName, description);
-            } else {
-                extentTest = extent.createTest(methodName);
-            }
+        String testKey = Thread.currentThread().getId() + "_" +
+                clazz.getName() + "." + methodName;
 
-            extentTest.assignAuthor("Vishwajeet Singh");
-            extentTest.assignDevice(System.getProperty("os.name"));
-
-            // ✅ Assign category based on package (feature folder)
-            String packageName = result.getMethod().getRealClass().getPackage().getName();
-            String[] packageParts = packageName.split("\\.");
-            String featureName = packageParts[packageParts.length - 1]; // e.g. auth, like, ManageProfiles
-            extentTest.assignCategory(featureName);
-
-            // ✅ Assign TestNG groups (if any)
-            for (String group : result.getMethod().getGroups()) {
-                extentTest.assignCategory(group);
-            }
-
-            extentTestMap.put(testName, extentTest);
+        if (extentTestMap.containsKey(testKey)) {
+            test.set(extentTestMap.get(testKey));
+            return;
         }
 
-        // Thread-safe storage for current test
+        // API name from package
+        String apiName = clazz.getPackage().getName(); // auth / like
+
+        // Sub-feature from class name
+        String feature = className
+                .replace("Test", "")
+                .replace("Tests", "");
+
+        // Test display name
+        String testName = "[" + feature + "] → " + methodName;
+
+        ExtentTest extentTest = extent.createTest(testName);
+
+        // Author
+        String author = result.getTestContext()
+                .getCurrentXmlTest()
+                .getParameter("author");
+
+        extentTest.assignAuthor(author != null ? author : "Unknown");
+
+        // ✅ ONLY ONE CATEGORY (API)
+        extentTest.assignCategory(apiName);
+
+        extentTestMap.put(testKey, extentTest);
         test.set(extentTest);
     }
-
 
 
     @Override
@@ -102,11 +106,6 @@ public class ExtentTestListener implements ITestListener, IInvokedMethodListener
             if (method.isTestMethod() && test.get() != null) {
                 test.get().log(Status.INFO, msg);
             }
-//
-//            // Attach execution time to Allure report
-//            if (method.isTestMethod()) {
-//                Allure.addAttachment("Execution Time", msg);
-//            }
         }
     }
 

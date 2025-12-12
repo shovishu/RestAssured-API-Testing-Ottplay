@@ -1,30 +1,47 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Ottplay Web Automation Suite">
+<suite name="Ottplay API Automation Suite">
     <listeners>
         <listener class-name="utils.ExtentTestListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
-    <test name="Smoke Group Tests">
+    <test name="Auth API Tests">
+        <parameter name="author" value="Vishwajeet"/>
         <classes>
-<!--            <class name="auth.LoginTests"/>-->
-<!--            <class name="profile.ProfileTest"/>-->
-<!--            <class name="watchlist.GetWatchlistTest"/>-->
-<!--            <class name="watchlist.AddWatchlistTest"/>-->
-<!--            <class name="watchlist.DeleteWatchlistTest"/>-->
-            <class name="like.GetLikesTest"/>
-            <class name="like.AddLikeTest"/>
-            <class name="like.DeleteLikeTest"/>
-<!--            <class name="whatsAppConsent.GetWhatsAppConsentStatusTests"/>-->
-<!--            <class name="whatsAppConsent.SubmitWhatsAppConsentTests"/>-->
-<!--            <class name="whatsAppConsent.UpdateWhatsAppConsent"/>-->
-
-<!--                            These two only to be done on prod                       -->
-<!--            <class name="player.VideoPlayerTests"/>-->
-<!--            <class name="player.MediaProgressTests"/>-->
-
-<!--            <class name="ManageProfiles.AvatarsListTests"/>-->
-<!--            <class name="ManageProfiles.ProfilesListTest"/>-->
-<!--            <class name="ManageProfiles.CreateProfileTests"/>-->
-<!--            <class name="ManageProfiles.DeleteProfileTests"/>-->
+            <class name="auth.LoginTests"/>
+            <class name="profile.ProfileTest"/>
         </classes>
     </test>
+
+        <test name="Like API Tests">
+            <parameter name="author" value="Shovishu"/>
+            <classes>
+                <class name="like.GetLikesTest"/>
+                <class name="like.AddLikeTest"/>
+                <class name="like.DeleteLikeTest"/>
+            </classes>
+        </test>
+
+<!--        <test name="Watchlist API Tests">-->
+<!--            <parameter name="author" value="Shovishu"/>-->
+<!--            <classes>-->
+<!--                <class name="watchlist.GetWatchlistTest"/>-->
+<!--                <class name="watchlist.AddWatchlistTest"/>-->
+<!--                <class name="watchlist.DeleteWatchlistTest"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--        <test name="Manage Profile API Tests">-->
+<!--            <parameter name="author" value="Shovishu"/>-->
+<!--            <classes>-->
+<!--                <class name="manage.profile.AvatarsListTests"/>-->
+<!--                <class name="manage.profile.ProfilesListTest"/>-->
+<!--                <class name="manage.profile.CreateProfileTests"/>-->
+<!--                <class name="manage.profile.DeleteProfileTests"/>-->
+<!--            </classes>-->
+<!--        </test>-->
 </suite>
+
+
+        <!--                            These two only to be done on prod                       -->
+        <!--            <class name="player.VideoPlayerTests"/>-->
+        <!--            <class name="player.MediaProgressTests"/>-->

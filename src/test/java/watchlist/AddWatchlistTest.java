@@ -20,6 +20,9 @@ public class AddWatchlistTest extends BaseClass {
 
     @BeforeClass
     public void setup() {
+        String contentId = "62f363d2d48670001c502201";
+        String contentType = "movie";
+        String deviceId = "078104a7928a0908";
         // Always fetch from SessionManager
         String token = SessionManager.getAuthToken();
         String clientId = SessionManager.getClientId();
@@ -30,18 +33,18 @@ public class AddWatchlistTest extends BaseClass {
         System.out.println("User Profile ID: " + userProfileId);
 
         // Call API
-        response = WatchlistClient.addToWatchlist(token);
+        response = WatchlistClient.addToWatchlist(token, userProfileId, clientId, contentId, contentType, deviceId);
         responseData = response.jsonPath().getMap("data");
     }
 
     // 1️⃣ Status code validation
-    @Test(priority = 1,description = "Verify Status Code")
+    @Test(priority = 1, description = "Verify Status Code")
     public void statusCodeTest() {
         assertThat("Response status code should be 201", response.getStatusCode(), equalTo(201));
     }
 
     // 2️⃣ Top-level fields validation
-    @Test(priority = 2,description = "Verify the Response Message")
+    @Test(priority = 2, description = "Verify the Response Message")
     public void topLevelFieldsTest() {
         Map<String, Object> json = response.jsonPath().getMap("");
         assertThat("Response should contain statusCode", json, hasKey("statusCode"));
@@ -56,7 +59,7 @@ public class AddWatchlistTest extends BaseClass {
 
 
     // 4️⃣ Required fields inside data
-    @Test(priority = 4,description = "Verify Mandatory Fields")
+    @Test(priority = 4, description = "Verify Mandatory Fields")
     public void requiredFieldsInDataTest() {
         String[] requiredFields = {
                 "ottplay_id", "ht_sso_id", "device_id", "movie_pref",
@@ -76,7 +79,7 @@ public class AddWatchlistTest extends BaseClass {
     }
 
     // 6️⃣ Date fields validation
-    @Test(priority = 6,description = "Verified Created and Modified Date")
+    @Test(priority = 6, description = "Verified Created and Modified Date")
     public void dateFieldsFormatTest() {
         String createdOn = (String) responseData.get("created_on");
         String modifiedOn = (String) responseData.get("modified_on");
@@ -87,11 +90,8 @@ public class AddWatchlistTest extends BaseClass {
     }
 
     // 7️⃣ Response time validation
-    @Test(priority = 7,description = "Verify Response Time")
+    @Test(priority = 7, description = "Verify Response Time")
     public void responseTimeTest() {
-//        long responseTime = response.getTime(); // ms
-//        assertThat("Response time should be < 250ms", responseTime, lessThan(250L));
-
         long responseTime2 = response.time();
         Assert.assertTrue(responseTime2 < 3000, "Response time greater than Expected");
     }

@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import models.LoginRequest;
 import static io.restassured.RestAssured.given;
 
-public class AuthClient extends BaseClass {
+public class LoginClient extends BaseClass {
 
     public static Response login() {
 
@@ -17,11 +17,7 @@ public class AuthClient extends BaseClass {
                 .build();
 
         return given()
-                .baseUri(getBaseUrl())
-                .header("accept", "application/json")
-                .header("x-client", 1003)
-                .header("platform", "web")
-                .contentType("application/json")
+                .spec(unauthSpec())
                 .body(request)
                 .when()
                 .post("/api/user-service/v1/verify-via-password")

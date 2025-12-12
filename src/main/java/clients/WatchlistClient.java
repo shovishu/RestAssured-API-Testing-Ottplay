@@ -8,61 +8,40 @@ import models.WatchlistRequest;
 import static io.restassured.RestAssured.given;
 
 public class WatchlistClient extends BaseClass {
-    /**
-     * Get the watchlist for the given user profile
-     */
-    public static Response getWatchlist(String token, String userProfileId) {
+
+    //Get the watchlist for the given user profile
+    public static Response getWatchlist(String token, String userProfileId, String clientId) {
         Response response = given()
-                .baseUri(getBaseUrl())
-                .header("Authorization", "Bearer " + token)
-                .header("profile_id", userProfileId)
-                .header("accept", "application/json")
+                .spec(authWithProfileSpec(token,userProfileId,clientId))
                 .when()
-                .get("/api/user-service/v1/user/watchlist/list"); // replace with actual endpoint
-
-        // Print full response to console
-//        response.prettyPrint();
-
+                .get("/api/user-service/v1/user/watchlist/list");
         return response;
     }
 
-
-    /**
-     * Add an item to the watchlist for the given user profile
-     */
-    public static Response addToWatchlist(String token) {
+    //Add an item to the watchlist for the given user profile
+    public static Response addToWatchlist(String token, String userProfileId, String clientId, String contentId, String contentType, String deviceId) {
         WatchlistRequest request = WatchlistRequest.builder()
-                .movie_pref("6867af9c9d3cca00291f5816")
-                .content_type("movie")
+                .movie_pref(contentId)
+                .content_type(contentType)
                 .build();
 
         return given()
-                .baseUri(getBaseUrl())
-                .header("auth", token)
-                .header("accept", "application/json")
-                .header("device_id", "99f019da-df25-4d12-9720-4abc0b6a30e9")
-//                .header("profile_id", userProfileId)
-//                .header("client_id", clientId)
-                .contentType(ContentType.JSON)
+                .spec(authWithProfileSpec(token,userProfileId,clientId))
+                .header("device_id", deviceId)
                 .body(request)
                 .when()
-                .post("/api/user-service/v1/user/watchlist/add"); // replace with actual endpoint
+                .post("/api/user-service/v1/user/watchlist/add");
     }
 
-    /**
-     * Delete an item from the watchlist for the given user profile
-     */
-    public static Response deleteFromWatchlist(String token, String userProfileId) {
+    //Delete an item from the watchlist for the given user profile
+    public static Response deleteFromWatchlist(String token, String userProfileId, String clientId, String contentId, String contentType, String deviceId) {
         return given()
-                .baseUri(getBaseUrl())
-                .header("auth", token)
-                .header("profile_id", userProfileId)
-                .header("accept", "application/json")
-                .contentType(ContentType.JSON)
-                .queryParam("contentId", "6867af9c9d3cca00291f5816")
-                .queryParam("contentType", "show")
+                .spec(authWithProfileSpec(token,userProfileId,clientId))
+                .header("device_id", deviceId)
+                .pathParam("contentId", contentId)
+                .queryParam("contentType", contentType)
                 .when()
-                .delete("/api/user-service/v1/user/watchlist/remove");
+                .delete("/api/user-service/v1/user/watchlist/remove/{contentId}");
     }
 
 }

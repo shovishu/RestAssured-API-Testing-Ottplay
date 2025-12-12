@@ -16,6 +16,10 @@ public class DeleteWatchlistTest {
 
     @BeforeClass
     public void setup() {
+        String contentId = "62f363d2d48670001c502201";
+        String contentType = "movie";
+        String deviceId = "078104a7928a0908";
+
         // Always fetch from SessionManager
         String token = SessionManager.getAuthToken();
         String clientId = SessionManager.getClientId();
@@ -25,9 +29,7 @@ public class DeleteWatchlistTest {
         System.out.println("ClientId: " + clientId);
         System.out.println("User Profile ID: " + userProfileId);
 
-        // Call API
-        response = WatchlistClient.deleteFromWatchlist(token,userProfileId);
-        System.out.println("Delete response: " + response.asString());
+        response = WatchlistClient.deleteFromWatchlist(token, userProfileId, clientId, contentId, contentType, deviceId);
     }
 
     // TC-01: Status code check

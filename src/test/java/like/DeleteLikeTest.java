@@ -1,8 +1,10 @@
 package like;
 
 import clients.LikeClient;
+import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utils.SessionManager;
@@ -10,26 +12,49 @@ import utils.SessionManager;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+@Epic("Like Module")
+@Feature("Delete Likes API")
+@Severity(SeverityLevel.CRITICAL)
 public class DeleteLikeTest {
     private static Response response;
 
-    @BeforeTest()
+    @Attachment(value = "API Response", type = "application/json")
+    public String attachResponse(String res) {
+        return res;
+    }
+
+    @Attachment(value = "API Request", type = "text/plain")
+    public String attachRequest(String req) {
+        return req;
+    }
+
+    @BeforeClass()
     public void setUp() {
+        String contentId = "62f363d2d48670001c502201";
+        String contentType = "movie";
+
         // Always fetch from SessionManager
         String token = SessionManager.getAuthToken();
         String clientId = SessionManager.getClientId();
         String userProfileId = SessionManager.getProfileId();
 
-//        System.out.println("Token: " + token);
-//        System.out.println("ClientId: " + clientId);
-//        System.out.println("User Profile ID: " + userProfileId);
+        System.out.println("Token: " + token);
+        System.out.println("ClientId: " + clientId);
+        System.out.println("User Profile ID: " + userProfileId);
 
-        response = LikeClient.deleteFromLikes(token,userProfileId);
-//        response.prettyPrint();
+        response = LikeClient.deleteFromLikes(token, userProfileId, clientId, contentType, contentId);
+
+        attachRequest(
+                "token=" + token +
+                        "\nclientId=" + clientId +
+                        "\nprofileId=" + userProfileId
+        );
+
+        attachResponse(response.asString());
     }
 
     @Test(priority = 1)
-    public void GetProfileLikeTest(){
+    public void validateStatusCode() {
         assertThat(response.getStatusCode(), equalTo(200));
     }
 
@@ -59,7 +84,7 @@ public class DeleteLikeTest {
 
     @Test(priority = 5)
     public void validateResponseTime() {
-        Assert.assertTrue(response.getTime() < 500L,"Response time should be < 500ms");
+        Assert.assertTrue(response.getTime() < 500L, "Response time should be < 500ms");
     }
 }
 
