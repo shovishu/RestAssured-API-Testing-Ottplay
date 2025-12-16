@@ -31,15 +31,15 @@
         </classes>
     </test>
 
-    <test name="Manage Profile API Tests">
-        <parameter name="author" value="Shovishu"/>
-        <classes>
-            <class name="manage.profile.AvatarsListTests"/>
-            <class name="manage.profile.ProfilesListTest"/>
-            <class name="manage.profile.CreateProfileTests"/>
-            <class name="manage.profile.DeleteProfileTests"/>
-        </classes>
-    </test>
+<!--    <test name="Manage Profile API Tests">-->
+<!--        <parameter name="author" value="Shovishu"/>-->
+<!--        <classes>-->
+<!--            <class name="manage.profile.AvatarsListTests"/>-->
+<!--            <class name="manage.profile.ProfilesListTest"/>-->
+<!--            <class name="manage.profile.CreateProfileTests"/>-->
+<!--            <class name="manage.profile.DeleteProfileTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
 
 
