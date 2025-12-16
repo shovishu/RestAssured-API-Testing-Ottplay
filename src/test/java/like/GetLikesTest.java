@@ -72,7 +72,7 @@ public class GetLikesTest extends BaseClass {
     // TC-03: Mandatory fields exist and are not null/empty
     @Test(priority = 4)
     public void validateMandatoryFields() {
-        List<String> ids = response.path("result._idvevyrvtvt");
+        List<String> ids = response.path("result._id");
         Assert.assertTrue(ids != null && !ids.isEmpty(), "❌ result._id list is null or empty");
 
         // 5️⃣ Loop through each _id to ensure no nulls
