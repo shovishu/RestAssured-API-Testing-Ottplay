@@ -19,10 +19,8 @@ public class ExtentManager {
         // 🔹 Create the base directory ONLY once
             String baseDir = System.getProperty("user.dir") + "/test-output/ExtentReports";
             File folder = new File(baseDir);
-            if (!folder.exists()) folder.mkdirs();
 
-
-            // 🔹 Create a new timestamped report file every test execution
+        // 🔹 Create a new timestamped report file every test execution
             String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
             String reportPath = baseDir + "/ExtentReport_" + timeStamp + ".html";
 
