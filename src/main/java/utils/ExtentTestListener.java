@@ -34,7 +34,7 @@ public class ExtentTestListener implements ITestListener, IInvokedMethodListener
         }
 
         // API name from package
-        String apiName = clazz.getPackage().getName(); // auth / like
+        String apiName = clazz.getPackage().getName();
 
         // Sub-feature from class name
         String feature = className
@@ -42,7 +42,7 @@ public class ExtentTestListener implements ITestListener, IInvokedMethodListener
                 .replace("Tests", "");
 
         // Test display name
-        String testName = "[" + feature + "] → " + methodName;
+        String testName = "[" + feature + "] -> " + methodName;
 
         ExtentTest extentTest = extent.createTest(testName);
 
@@ -60,15 +60,23 @@ public class ExtentTestListener implements ITestListener, IInvokedMethodListener
         test.set(extentTest);
     }
 
-
     @Override
     public void onTestSuccess(ITestResult result) {
         test.get().pass("Test Passed ✅");
     }
 
-    @Override
     public void onTestFailure(ITestResult result) {
-        test.get().fail("Test Failed ❌: " + result.getThrowable());
+        IRetryAnalyzer retryAnalyzer = result.getMethod().getRetryAnalyzer(result);
+        if (retryAnalyzer instanceof ApiRetryAnalyzer) {
+            ApiRetryAnalyzer apiRetry = (ApiRetryAnalyzer) retryAnalyzer;
+//            int currentRetry = apiRetry.getRetryCount();
+//            int maxRetry = apiRetry.getMaxRetry();
+//            System.out.println("Test failed: " + result.getName() + " | attempt " + currentRetry + "/" + maxRetry);
+
+            // Optional: log to ExtentReports
+            Throwable throwable = result.getThrowable();
+            test.get().fail("Test Failed ❌: " + (throwable != null ? throwable.getMessage() : "No exception"));
+        }
     }
 
     @Override

@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Ottplay API Automation Suite">
     <listeners>
+        <listener class-name="utils.RetryTransformer"/>
         <listener class-name="utils.ExtentTestListener"/>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
@@ -12,33 +13,33 @@
         </classes>
     </test>
 
-        <test name="Like API Tests">
-            <parameter name="author" value="Shovishu"/>
-            <classes>
-                <class name="like.GetLikesTest"/>
-                <class name="like.AddLikeTest"/>
-                <class name="like.DeleteLikeTest"/>
-            </classes>
-        </test>
+    <test name="Like API Tests">
+        <parameter name="author" value="Shovishu"/>
+        <classes>
+            <class name="like.GetLikesTest"/>
+            <class name="like.AddLikeTest"/>
+            <class name="like.DeleteLikeTest"/>
+        </classes>
+    </test>
 
-<!--        <test name="Watchlist API Tests">-->
-<!--            <parameter name="author" value="Shovishu"/>-->
-<!--            <classes>-->
-<!--                <class name="watchlist.GetWatchlistTest"/>-->
-<!--                <class name="watchlist.AddWatchlistTest"/>-->
-<!--                <class name="watchlist.DeleteWatchlistTest"/>-->
-<!--            </classes>-->
-<!--        </test>-->
+    <test name="Watchlist API Tests">
+        <parameter name="author" value="Shovishu"/>
+        <classes>
+            <class name="watchlist.GetWatchlistTest"/>
+            <class name="watchlist.AddWatchlistTest"/>
+            <class name="watchlist.DeleteWatchlistTest"/>
+        </classes>
+    </test>
 
-<!--        <test name="Manage Profile API Tests">-->
-<!--            <parameter name="author" value="Shovishu"/>-->
-<!--            <classes>-->
-<!--                <class name="manage.profile.AvatarsListTests"/>-->
-<!--                <class name="manage.profile.ProfilesListTest"/>-->
-<!--                <class name="manage.profile.CreateProfileTests"/>-->
-<!--                <class name="manage.profile.DeleteProfileTests"/>-->
-<!--            </classes>-->
-<!--        </test>-->
+    <test name="Manage Profile API Tests">
+        <parameter name="author" value="Shovishu"/>
+        <classes>
+            <class name="manage.profile.AvatarsListTests"/>
+            <class name="manage.profile.ProfilesListTest"/>
+            <class name="manage.profile.CreateProfileTests"/>
+            <class name="manage.profile.DeleteProfileTests"/>
+        </classes>
+    </test>
 </suite>
 
 
