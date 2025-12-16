@@ -1,0 +1,4308 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>API Automation Test Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">RestAssured API Suite Results</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">16-12-2025 16:43:16</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Vishwajeet</a><a class="dropdown-item" href="#">Shovishu</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">watchlist</a><a class="dropdown-item" href="#">profile</a><a class="dropdown-item" href="#">auth</a><a class="dropdown-item" href="#">like</a><a class="dropdown-item" href="#">manage.profile</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → verifyStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:015</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → verifyStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:015</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for verifyStatusCode → 7 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → verifyIfRequestSuccessful</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:019</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → verifyIfRequestSuccessful</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:019</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for verifyIfRequestSuccessful → 18 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → verifyAuthToken</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:020</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → verifyAuthToken</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:020</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for verifyAuthToken → 20 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → verifyUserDetails</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:088</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → verifyUserDetails</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:088</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for verifyUserDetails → 87 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → VerifySubscriptionStatus</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:013</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → VerifySubscriptionStatus</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:013</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for VerifySubscriptionStatus → 12 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → VerifyPlanDetails</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:067</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → VerifyPlanDetails</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:067</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for VerifyPlanDetails → 66 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author="Vishwajeet"
+          tag="auth"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Logins] → responseTimeTest</p>
+            <p class="text-sm">
+              <span>4:43:20 pm</span> / <span>00:00:00:002</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Logins] → responseTimeTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:20 pm</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">auth</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          ⏱ Execution time for responseTimeTest → 2 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:20 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author="Vishwajeet"
+          tag="profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Profile] → validateTopLevelResponse</p>
+            <p class="text-sm">
+              <span>4:43:21 pm</span> / <span>00:00:00:079</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Profile] → validateTopLevelResponse</h5>
+<span class='badge badge-success'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-default'>00:00:00:079</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          ⏱ Execution time for validateTopLevelResponse → 79 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author="Vishwajeet"
+          tag="profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Profile] → validateUserProfiles</p>
+            <p class="text-sm">
+              <span>4:43:21 pm</span> / <span>00:00:00:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Profile] → validateUserProfiles</h5>
+<span class='badge badge-success'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-default'>00:00:00:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          ⏱ Execution time for validateUserProfiles → 10 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author="Vishwajeet"
+          tag="profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Profile] → validateDevicePreferences</p>
+            <p class="text-sm">
+              <span>4:43:21 pm</span> / <span>00:00:00:015</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Profile] → validateDevicePreferences</h5>
+<span class='badge badge-success'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-default'>00:00:00:015</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          ⏱ Execution time for validateDevicePreferences → 15 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author="Vishwajeet"
+          tag="profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[Profile] → validateResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:21 pm</span> / <span>00:00:00:003</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[Profile] → validateResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:21 pm</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vishwajeet</span>
+<span class="badge badge-pill badge-default">profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          ⏱ Execution time for validateResponseTime → 2 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:21 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetLikes] → GetProfileLikeTest</p>
+            <p class="text-sm">
+              <span>4:43:22 pm</span> / <span>00:00:00:003</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetLikes] → GetProfileLikeTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for GetProfileLikeTest → 3 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetLikes] → validateMessageResponse</p>
+            <p class="text-sm">
+              <span>4:43:22 pm</span> / <span>00:00:00:093</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetLikes] → validateMessageResponse</h5>
+<span class='badge badge-success'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-default'>00:00:00:093</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for validateMessageResponse → 93 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetLikes] → validateMandatoryFields</p>
+            <p class="text-sm">
+              <span>4:43:22 pm</span> / <span>00:00:00:255</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">[GetLikes] → validateMandatoryFields</h5>
+<span class='badge badge-success'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-default'>00:00:00:255</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for validateMandatoryFields → 65 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Skipped ⚠️: java.lang.AssertionError: ❌ Found null _id in result array expected object to not be null
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for validateMandatoryFields → 74 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Skipped ⚠️: java.lang.AssertionError: ❌ Found null _id in result array expected object to not be null
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for validateMandatoryFields → 72 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Failed ❌: ❌ Found null _id in result array expected object to not be null
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetLikes] → validateResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:22 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetLikes] → validateResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for validateResponseTime → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddLike] → validateStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:22 pm</span> / <span>00:00:00:003</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddLike] → validateStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          ⏱ Execution time for validateStatusCode → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:22 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddLike] → validateMessageResponse</p>
+            <p class="text-sm">
+              <span>4:43:22 pm</span> / <span>00:00:00:016</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddLike] → validateMessageResponse</h5>
+<span class='badge badge-success'>12.16.2025 4:43:22 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:016</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateMessageResponse → 15 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddLike] → validateNoNullData</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddLike] → validateNoNullData</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateNoNullData → 2 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddLike] → validateMandatoryFields</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddLike] → validateMandatoryFields</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateMandatoryFields → 2 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddLike] → validateResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:005</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddLike] → validateResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:005</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateResponseTime → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteLike] → validateStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteLike] → validateStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateStatusCode → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteLike] → validateMessageResponse</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:012</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteLike] → validateMessageResponse</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateMessageResponse → 10 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteLike] → validateDataSection</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:026</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteLike] → validateDataSection</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:026</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateDataSection → 24 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteLike] → validateDocumentSection</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:027</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteLike] → validateDocumentSection</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:027</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateDocumentSection → 27 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author="Shovishu"
+          tag="like"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteLike] → validateResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:003</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteLike] → validateResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">like</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateResponseTime → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetWatchlist] → testStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:003</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetWatchlist] → testStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for testStatusCode → 2 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetWatchlist] → GetProfileWatchlistTest</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetWatchlist] → GetProfileWatchlistTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for GetProfileWatchlistTest → 10 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetWatchlist] → validateAllMoviePrefAssetIds</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:064</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetWatchlist] → validateAllMoviePrefAssetIds</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:064</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateAllMoviePrefAssetIds → 64 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[GetWatchlist] → validateResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[GetWatchlist] → validateResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for validateResponseTime → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → statusCodeTest</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → statusCodeTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for statusCodeTest → 1 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="31"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → topLevelFieldsTest</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → topLevelFieldsTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for topLevelFieldsTest → 2 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → responseDataNotNullTest</p>
+            <p class="text-sm">
+              <span>4:43:23 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → responseDataNotNullTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:23 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          ⏱ Execution time for responseDataNotNullTest → 1 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:23 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → requiredFieldsInDataTest</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:002</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → requiredFieldsInDataTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for requiredFieldsInDataTest → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → ottplayIdNotEmptyTest</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:003</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → ottplayIdNotEmptyTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for ottplayIdNotEmptyTest → 3 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="35"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → dateFieldsFormatTest</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:002</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → dateFieldsFormatTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for dateFieldsFormatTest → 1 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="36"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AddWatchlist] → responseTimeTest</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AddWatchlist] → responseTimeTest</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for responseTimeTest → 1 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="37"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteWatchlist] → statusCodeShouldBe200</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteWatchlist] → statusCodeShouldBe200</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for statusCodeShouldBe200 → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="38"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteWatchlist] → responseShouldContainRequiredFields</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteWatchlist] → responseShouldContainRequiredFields</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for responseShouldContainRequiredFields → 3 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="39"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteWatchlist] → acknowledgedShouldBeBoolean</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:008</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteWatchlist] → acknowledgedShouldBeBoolean</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for acknowledgedShouldBeBoolean → 7 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="40"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteWatchlist] → deletedCountShouldBeNonNegative</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteWatchlist] → deletedCountShouldBeNonNegative</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for deletedCountShouldBeNonNegative → 9 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="41"
+          author="Shovishu"
+          tag="watchlist"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteWatchlist] → responseTimeShouldBeLessThan250ms</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteWatchlist] → responseTimeShouldBeLessThan250ms</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">watchlist</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for responseTimeShouldBeLessThan250ms → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="42"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AvatarsLists] → verifyStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AvatarsLists] → verifyStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyStatusCode → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="43"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AvatarsLists] → verifyResponseStatus</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AvatarsLists] → verifyResponseStatus</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=43</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseStatus → 8 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="44"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AvatarsLists] → verifyResponseMessage</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:008</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AvatarsLists] → verifyResponseMessage</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=44</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseMessage → 8 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="45"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[AvatarsLists] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:012</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[AvatarsLists] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=45</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyDataIsNotNullAndContainsIdAndAvatarUrl → 11 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="46"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[ProfilesList] → verifyStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[ProfilesList] → verifyStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=46</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyStatusCode → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="47"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[ProfilesList] → verifyMaxProfilesAllowed</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[ProfilesList] → verifyMaxProfilesAllowed</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=47</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyMaxProfilesAllowed → 9 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="48"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[ProfilesList] → verifyResponseStatus</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:009</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[ProfilesList] → verifyResponseStatus</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=48</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseStatus → 8 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="49"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[ProfilesList] → verifyResponseMessage</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[ProfilesList] → verifyResponseMessage</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=49</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseMessage → 11 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="50"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[ProfilesList] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:012</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[ProfilesList] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=50</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyDataIsNotNullAndContainsIdAndAvatarUrl → 12 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="51"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[CreateProfiles] → verifyStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[CreateProfiles] → verifyStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyStatusCode → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="52"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[CreateProfiles] → verifyResponseStatus</p>
+            <p class="text-sm">
+              <span>4:43:24 pm</span> / <span>00:00:00:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[CreateProfiles] → verifyResponseStatus</h5>
+<span class='badge badge-success'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:24 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=52</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseStatus → 9 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:24 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="53"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[CreateProfiles] → verifyResponseMessage</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:008</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[CreateProfiles] → verifyResponseMessage</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=53</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseMessage → 8 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="54"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[CreateProfiles] → verifyMandatoryFiledInResponse</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:043</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[CreateProfiles] → verifyMandatoryFiledInResponse</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:043</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=54</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyMandatoryFiledInResponse → 42 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="55"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[CreateProfiles] → verifyResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[CreateProfiles] → verifyResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=55</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseTime → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="56"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteProfiles] → verifyStatusCode</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteProfiles] → verifyStatusCode</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=56</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyStatusCode → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="57"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteProfiles] → verifyResponseStatus</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:009</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteProfiles] → verifyResponseStatus</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=57</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseStatus → 9 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="58"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteProfiles] → verifyResponseMessage</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteProfiles] → verifyResponseMessage</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=58</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseMessage → 10 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="59"
+          author="Shovishu"
+          tag="manage.profile"
+          device="">
+          <div class="test-detail">
+            <p class="name">[DeleteProfiles] → verifyResponseTime</p>
+            <p class="text-sm">
+              <span>4:43:25 pm</span> / <span>00:00:00:001</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">[DeleteProfiles] → verifyResponseTime</h5>
+<span class='badge badge-success'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-danger'>12.16.2025 4:43:25 pm</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=59</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shovishu</span>
+<span class="badge badge-pill badge-default">manage.profile</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          ⏱ Execution time for verifyResponseTime → 0 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:43:25 pm</td>
+        <td>
+          Test Passed ✅
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>16</span>
+</span>
+<p class="name">watchlist</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>watchlist</h4>
+<span status="pass" class='badge log pass-bg'>16 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>[GetWatchlist] → testStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>[GetWatchlist] → GetProfileWatchlistTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>[GetWatchlist] → validateAllMoviePrefAssetIds</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>[GetWatchlist] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>[AddWatchlist] → statusCodeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>[AddWatchlist] → topLevelFieldsTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>[AddWatchlist] → responseDataNotNullTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>[AddWatchlist] → requiredFieldsInDataTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>[AddWatchlist] → ottplayIdNotEmptyTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>[AddWatchlist] → dateFieldsFormatTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>[AddWatchlist] → responseTimeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>[DeleteWatchlist] → statusCodeShouldBe200</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>[DeleteWatchlist] → responseShouldContainRequiredFields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>[DeleteWatchlist] → acknowledgedShouldBeBoolean</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>[DeleteWatchlist] → deletedCountShouldBeNonNegative</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>[DeleteWatchlist] → responseTimeShouldBeLessThan250ms</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">profile</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>profile</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>[Profile] → validateTopLevelResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>[Profile] → validateUserProfiles</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>[Profile] → validateDevicePreferences</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>[Profile] → validateResponseTime</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">auth</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>auth</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>[Logins] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>[Logins] → verifyIfRequestSuccessful</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>[Logins] → verifyAuthToken</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>[Logins] → verifyUserDetails</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>[Logins] → VerifySubscriptionStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>[Logins] → VerifyPlanDetails</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>[Logins] → responseTimeTest</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">like</p>
+<p class="duration text-sm">14 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>like</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>[GetLikes] → GetProfileLikeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>[GetLikes] → validateMessageResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>[GetLikes] → validateMandatoryFields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>[GetLikes] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>[AddLike] → validateStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>[AddLike] → validateMessageResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>[AddLike] → validateNoNullData</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>[AddLike] → validateMandatoryFields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>[AddLike] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>[DeleteLike] → validateStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>[DeleteLike] → validateMessageResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>[DeleteLike] → validateDataSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>[DeleteLike] → validateDocumentSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>[DeleteLike] → validateResponseTime</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>18</span>
+</span>
+<p class="name">manage.profile</p>
+<p class="duration text-sm">18 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>manage.profile</h4>
+<span status="pass" class='badge log pass-bg'>18 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='42' id='42'>[AvatarsLists] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='43' id='43'>[AvatarsLists] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='44' id='44'>[AvatarsLists] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='45' id='45'>[AvatarsLists] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='46' id='46'>[ProfilesList] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='47' id='47'>[ProfilesList] → verifyMaxProfilesAllowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='48' id='48'>[ProfilesList] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='49' id='49'>[ProfilesList] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='50' id='50'>[ProfilesList] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='51' id='51'>[CreateProfiles] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='52' id='52'>[CreateProfiles] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='53' id='53'>[CreateProfiles] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='54' id='54'>[CreateProfiles] → verifyMandatoryFiledInResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='55' id='55'>[CreateProfiles] → verifyResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='56' id='56'>[DeleteProfiles] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='57' id='57'>[DeleteProfiles] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='58' id='58'>[DeleteProfiles] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='59' id='59'>[DeleteProfiles] → verifyResponseTime</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>11</span>
+</span>
+<p class="name">Vishwajeet</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Vishwajeet</h4>
+<span status="pass" class='badge log pass-bg'>11 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>[Logins] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>[Logins] → verifyIfRequestSuccessful</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>[Logins] → verifyAuthToken</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>[Logins] → verifyUserDetails</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>[Logins] → VerifySubscriptionStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>[Logins] → VerifyPlanDetails</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:20 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>[Logins] → responseTimeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>[Profile] → validateTopLevelResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>[Profile] → validateUserProfiles</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>[Profile] → validateDevicePreferences</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>[Profile] → validateResponseTime</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>47</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Shovishu</p>
+<p class="duration text-sm">48 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Shovishu</h4>
+<span status="pass" class='badge log pass-bg'>47 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>[GetLikes] → GetProfileLikeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>[GetLikes] → validateMessageResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>[GetLikes] → validateMandatoryFields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>[GetLikes] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>[AddLike] → validateStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>[AddLike] → validateMessageResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>[AddLike] → validateNoNullData</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>[AddLike] → validateMandatoryFields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>[AddLike] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>[DeleteLike] → validateStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>[DeleteLike] → validateMessageResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>[DeleteLike] → validateDataSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>[DeleteLike] → validateDocumentSection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>[DeleteLike] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>[GetWatchlist] → testStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>[GetWatchlist] → GetProfileWatchlistTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>[GetWatchlist] → validateAllMoviePrefAssetIds</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>[GetWatchlist] → validateResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>[AddWatchlist] → statusCodeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>[AddWatchlist] → topLevelFieldsTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>[AddWatchlist] → responseDataNotNullTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>[AddWatchlist] → requiredFieldsInDataTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>[AddWatchlist] → ottplayIdNotEmptyTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>[AddWatchlist] → dateFieldsFormatTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>[AddWatchlist] → responseTimeTest</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>[DeleteWatchlist] → statusCodeShouldBe200</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>[DeleteWatchlist] → responseShouldContainRequiredFields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>[DeleteWatchlist] → acknowledgedShouldBeBoolean</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>[DeleteWatchlist] → deletedCountShouldBeNonNegative</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>[DeleteWatchlist] → responseTimeShouldBeLessThan250ms</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='42' id='42'>[AvatarsLists] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='43' id='43'>[AvatarsLists] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='44' id='44'>[AvatarsLists] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='45' id='45'>[AvatarsLists] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='46' id='46'>[ProfilesList] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='47' id='47'>[ProfilesList] → verifyMaxProfilesAllowed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='48' id='48'>[ProfilesList] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='49' id='49'>[ProfilesList] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='50' id='50'>[ProfilesList] → verifyDataIsNotNullAndContainsIdAndAvatarUrl</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='51' id='51'>[CreateProfiles] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:24 pm</td>
+<td>
+<a href="#" class="linked" test-id='52' id='52'>[CreateProfiles] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='53' id='53'>[CreateProfiles] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='54' id='54'>[CreateProfiles] → verifyMandatoryFiledInResponse</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='55' id='55'>[CreateProfiles] → verifyResponseTime</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='56' id='56'>[DeleteProfiles] → verifyStatusCode</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='57' id='57'>[DeleteProfiles] → verifyResponseStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='58' id='58'>[DeleteProfiles] → verifyResponseMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:43:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='59' id='59'>[DeleteProfiles] → verifyResponseTime</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>16-12-2025 16:43:16</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>16-12-2025 16:43:25</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>58</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='98%'>
+<b>58</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='1%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='47%'><b>58</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>1</b> events failed,
+<b data-tooltip='%'>63</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"[Logins] → verifyStatusCode":0.015,"[Logins] → verifyIfRequestSuccessful":0.019,"[Logins] → verifyAuthToken":0.02,"[Logins] → verifyUserDetails":0.088,"[Logins] → VerifySubscriptionStatus":0.013,"[Logins] → VerifyPlanDetails":0.067,"[Logins] → responseTimeTest":0.002,"[Profile] → validateTopLevelResponse":0.079,"[Profile] → validateUserProfiles":0.011,"[Profile] → validateDevicePreferences":0.015,"[Profile] → validateResponseTime":0.003,"[GetLikes] → GetProfileLikeTest":0.003,"[GetLikes] → validateMessageResponse":0.093,"[GetLikes] → validateMandatoryFields":0.255,"[GetLikes] → validateResponseTime":0.001,"[AddLike] → validateStatusCode":0.003,"[AddLike] → validateMessageResponse":0.016,"[AddLike] → validateNoNullData":0.004,"[AddLike] → validateMandatoryFields":0.004,"[AddLike] → validateResponseTime":0.005,"[DeleteLike] → validateStatusCode":0.001,"[DeleteLike] → validateMessageResponse":0.012,"[DeleteLike] → validateDataSection":0.026,"[DeleteLike] → validateDocumentSection":0.027,"[DeleteLike] → validateResponseTime":0.003,"[GetWatchlist] → testStatusCode":0.003,"[GetWatchlist] → GetProfileWatchlistTest":0.011,"[GetWatchlist] → validateAllMoviePrefAssetIds":0.064,"[GetWatchlist] → validateResponseTime":0.001,"[AddWatchlist] → statusCodeTest":0.001,"[AddWatchlist] → topLevelFieldsTest":0.004,"[AddWatchlist] → responseDataNotNullTest":0.001,"[AddWatchlist] → requiredFieldsInDataTest":0.002,"[AddWatchlist] → ottplayIdNotEmptyTest":0.003,"[AddWatchlist] → dateFieldsFormatTest":0.002,"[AddWatchlist] → responseTimeTest":0.001,"[DeleteWatchlist] → statusCodeShouldBe200":0.001,"[DeleteWatchlist] → responseShouldContainRequiredFields":0.004,"[DeleteWatchlist] → acknowledgedShouldBeBoolean":0.008,"[DeleteWatchlist] → deletedCountShouldBeNonNegative":0.01,"[DeleteWatchlist] → responseTimeShouldBeLessThan250ms":0.001,"[AvatarsLists] → verifyStatusCode":0,"[AvatarsLists] → verifyResponseStatus":0.01,"[AvatarsLists] → verifyResponseMessage":0.008,"[AvatarsLists] → verifyDataIsNotNullAndContainsIdAndAvatarUrl":0.012,"[ProfilesList] → verifyStatusCode":0.001,"[ProfilesList] → verifyMaxProfilesAllowed":0.01,"[ProfilesList] → verifyResponseStatus":0.009,"[ProfilesList] → verifyResponseMessage":0.011,"[ProfilesList] → verifyDataIsNotNullAndContainsIdAndAvatarUrl":0.012,"[CreateProfiles] → verifyStatusCode":0,"[CreateProfiles] → verifyResponseStatus":0.01,"[CreateProfiles] → verifyResponseMessage":0.008,"[CreateProfiles] → verifyMandatoryFiledInResponse":0.043,"[CreateProfiles] → verifyResponseTime":0.001,"[DeleteProfiles] → verifyStatusCode":0.001,"[DeleteProfiles] → verifyResponseStatus":0.009,"[DeleteProfiles] → verifyResponseMessage":0.011,"[DeleteProfiles] → verifyResponseTime":0.001
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Vishwajeet</td>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Shovishu</td>
+<td>47</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>97.917%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>watchlist</td>
+<td>16</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>profile</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>like</td>
+<td>13</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>92.857%</td>
+</tr>
+<tr>
+<td>manage.profile</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Project Name</td>
+<td>OTTPlay API Automation</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>PREPROD</td>
+</tr>
+<tr>
+<td>Base URL</td>
+<td>https://subs-api-demo.ottplay.com</td>
+</tr>
+<tr>
+<td>Executed By</td>
+<td>VISHWAJEET SINGH</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>17.0.12</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>TestNG + RestAssured</td>
+</tr>
+<tr>
+<td>Report Generated On</td>
+<td>Tue, 16 Dec 2025 16:43:16</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 58,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 58,
+failEvents: 1,
+warningEvents: 0,
+skipEvents: 2,
+infoEvents: 61
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

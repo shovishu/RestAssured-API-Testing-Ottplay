@@ -10,6 +10,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import utils.ExtentManager;
 
+import java.io.File;
+
 import static io.restassured.RestAssured.given;
 
 public class BaseClass {
@@ -23,9 +25,28 @@ public class BaseClass {
     }
 
     @AfterSuite
-    public void tearDownSuite() {
-        extent.flush();  // writes everything to the HTML file
+    public static void flushReports() {
+        if (extent != null) {
+            extent.flush();
+
+            // Copy latest report as 'LatestReport.html' for Jenkins
+            try {
+                File latest = new File(System.getProperty("user.dir") + "/test-output/ExtentReports/LatestReport.html");
+                File[] files = new File(System.getProperty("user.dir") + "/test-output/ExtentReports").listFiles((dir, name) -> name.endsWith(".html"));
+                if (files != null && files.length > 0) {
+                    // Find the latest by modified time
+                    File newest = files[0];
+                    for (File f : files) {
+                        if (f.lastModified() > newest.lastModified()) newest = f;
+                    }
+                    java.nio.file.Files.copy(newest.toPath(), latest.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
+
 
     public static String getBaseUrl() {
         return ConfigManager.get(env + ".baseURI");
