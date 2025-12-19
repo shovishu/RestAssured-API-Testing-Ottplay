@@ -19,6 +19,7 @@ public class BaseClass {
 
     @BeforeSuite
     public void setupSuite() {
+        System.out.println("Running on env: " + env);
         extent = ExtentManager.getInstance();
     }
 
