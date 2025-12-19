@@ -67,7 +67,7 @@ public class GetWatchlistTest extends BaseClass {
     }
 
 
-    @Test(priority = 6)
+    @Test(priority = 4)
     public void validateResponseTime() {
         Assert.assertTrue(response.getTime() <= 2000, "Response time exceeded 2000ms");
     }
